@@ -1,20 +1,166 @@
 <!doctype html>
-
-<html lang="en">
+<html>
 <head>
-  <meta charset="utf-8">
-
-  <title>Hello World</title>
-  <meta name="description" content="Hello World">
-  <meta name="author" content="SitePoint">
-
-  <link rel="stylesheet" href="css/styles.css">
-
-</head>
-
-<body>
-  <h1>Hello World</h1>
+	<meta charset="UTF-8">
+  <title>GitHub with CLI (Terminal)</title>
   
-  <script src="js/scripts.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="main-header">
+    <h1>CT LAB</h1>
+    <h3>Hogeschool Rotterdam - Communicatie & Multimedia Design</h3>
+  </header>
+  <main>
+    
+    <h1>GitHub with CLI (Terminal)</h1>
+
+    <p>Voordat je begint aan deze walktrough is het belangrijk dat je de volgende software download.
+    GitHub Desktop: <a href="https://desktop.github.com/">Download hier</a>
+    Visual Studio Code: <a href="https://code.visualstudio.com/">Download hier</a></p>
+
+    <hr />
+
+    <h2>Maak een nieuwe repository aan.</h2>
+
+    <p>Bekijk de video hoe je vanuit <code>GitHub.com</code> een nieuwe <em>repository</em> aan maakt. Belangrijk zorg ervoor dat de <em>repository</em> op <strong>public</strong> staat.</p>
+
+
+    <video width="400" controls>
+      <source src="video/01-create-new-repo.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+
+    <hr />
+
+    <h2>Open (lokaal) project in VS Code</h2>
+
+    <p>Ergens op de je computer heb je een mapje staan met je toekomstige website/app. Open deze map in Visual Studio Code, in het voorbeeld zie je een leeg mapje.</p>
+
+
+    <video width="400" controls>
+      <source src="video/02-open-project-code.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+
+    <hr />
+
+    <h2>Open Terminal in VS Code</h2>
+
+    <p>We gaan met de <em>Terminal</em> werken in <em>VS Code</em>. Open een nieuwe <em>Terminal</em> via het menu. </p>
+
+    <p>Voor Windows gebruiker, zorg ervoor dat je in terminal <em>Git Bash</em> gebruikt. <a href="https://medium.com/danielpadua/git-bash-with-vscode-593d5998f6be">Lees hier meer.</a>. Of zie de screenshots onder de video.</p>
+
+
+    <video width="400" controls>
+      <source src="video/02-open-terminal.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+
+    <p>Van <em>shell</em> veranderen in <em>VS Code</em> kan via je <em>Terminal</em> window, rechtssboven. Dit is vooral aan te raden voor Windows gebruiken. Dan werken namelijk alle commando's in de volgende stappen. Zie de screenshots. </p>
+
+    <p><img src="img/shell-01.png" alt="" />
+    <img src="img/shell-02.png" alt="" /></p>
+
+    <hr />
+
+    <h2>Git Init</h2>
+
+    <p>Voordat je lokale mapje kan worden <em>gepushed</em> naar een <em>remote</em> (een plek waar je bestanden worden bewaard en getraceerd, in dit geval op Github, kan ook een andere externe server zijn). Zal je eerst je project moeten starten door de commando <code>git init</code>.
+    Zodra je dit hebt gedaan kan je code kopiëren vanuit je <em>nieuw</em> aangemaakte repository op GitHub. Het commando begint altijd met <code>git remote add</code>, met daarachter het adres van de <em>remote</em>.</p>
+
+    <h4>Belangrijke commando's</h4>
+
+    <ul>
+    <li><code>git init</code></li>
+    <li><code>git remote add</code> + adres</li>
+    </ul>
+
+    <video width="400" controls>
+      <source src="video/03-init-git-add-remote.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+
+    <hr />
+
+    <h2>Clear Terminal</h2>
+
+    <p>Om die ellenlang tekst in je <em>terminal</em> op te ruimen gebruiken we het volgende commando: <code>clear</code>
+    Gebruik dit tussendoor als je een <em>&quot;leeg&quot; terminal</em> scherm wilt hebben. </p>
+
+
+    <video width="400" controls>
+      <source src="video/03-01-clear.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+
+
+    <hr />
+
+    <h2>Git Add, Git Commit &amp; Git Push</h2>
+
+    <p>In deze stap gaan we door de basics van <strong>git</strong>, een stap die we vaak zullen herhalen.
+    We gaan nu een nieuw , untracked, bestand toevoegen. Deze gaan we op laten nemen in <em>git</em>. Om dit te doen gebruiken we het commando <code>git add</code> nadat we een bestand hebben, aangemaakt, bewerkt en opgeslagen.
+    We voeren na <code>git add</code> de bestands naam om aan te geven welk bestand we willen toevoegen.
+    Om te checken welke bestanden nieuw, gewijzigd of verwijderd zijn. Gebruiken we het commando <code>git status</code>.
+    Zodra we alle veranderingen hebben toegevoegd. Gaan we <em>committen</em> aan <em>git</em>. Zodat de veranderingen daadwerkelijk worden opgeslagen en een vast punt in onze <em>git history</em> krijgen. Daarvoor gebruiken het volgende commando: <code>git commit -m &quot;commit message&quot;</code>
+    We kunnen <em>commit message</em> vervangen door een korte beschrijven van wat we hebben gedaan. Meestal gebruiken we hier actieve werkwoorden voor. Zoals: added, deleted, fixed etc. etc.
+    Zodra je dit hebt gedaan <em>push</em> je alle veranderingen naar de <em>remote</em>. Hiervoor gebruik je het commando <code>git push</code>. De allereerste keer zal je een melding krijgen dat je ook een <em>branch</em> moet kiezen. Neem gewoon het commando over wat je in de <em>terminal</em> ziet verschijnen. Je kan nu op GitHub zien dat je code is <em>gepushed</em>.</p>
+
+    <p><em>Let op: het kan zijn dat er om een Github Username &amp; Password wordt gevraagd tijdens het pushen, type gewoon je paswoord in van GitHub, dit zie <strong>niet</strong> verschijnen in je terminal</em> </p>
+
+    <h4>Belangrijke commando's</h4>
+
+    <ul>
+    <li><code>git status</code></li>
+    <li><code>git add</code></li>
+    <li><code>git commit -m &quot;commit message&quot;</code></li>
+    <li><code>git push</code></li>
+    </ul>
+
+    <video width="400" controls>
+      <source src="video/04-git-add-commit-push.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+
+    <hr />
+
+    <h2>GitHub Pages</h2>
+
+    <p>Om <em>GitHub Pages</em> te activeren zal je in de <em>settings</em> van je <em>repository</em> de optie moeten aanvinken. Open je <em>settings</em> rechtsboven in het menu van je <em>repository</em>. <strong>Scroll een heel stuk naar beneden</strong>. Daar vind je de optie om <em>GitHub Pages</em> aan te zetten. (<strong>Belangrijk zorg ervoor dat je repository op public staat</strong>). Wacht enkele momenten, de server van GitHub zullen je bestanden zo snel mogelijk publicere (beetje geduld). Nu heb je een website gepubliceerd op GitHub. Klik op URL die verschijnt in je <em>settings</em> pagina onder het kopje <em>GitHub Pages</em>.</p>
+
+    <video width="400" controls>
+      <source src="video/05-gh-pages.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+
+
+    <hr />
+
+    <h2>Git Add (everything), Git Commit, Git Push</h2>
+
+    <p>Zoals al eerder aangegeven zijn dit stappen die je zal herhalen als je aan je project werkt in <em>git</em>. Allereerst gaan we veel wijzigen aanbrengen en deze allemaal tegelijk <em>tracken</em>. Om eerst te checken wat onze status is, gebruiken we <code>git status</code>.
+    Om alles in één keer te <em>tracken</em> doen we <code>git add .</code>, het is belangrijk om een <strong>.</strong> achter <code>git add</code> te zetten. Op deze manuier kunnen we alles in één keer <em>tracken</em>. Vervolgens ga je weer <em>committen</em> met <code>git commit -m &quot;commit message&quot;</code> en gebruik je <code>git push</code> om naar je <em>remote</em> te uploaden, in dit geval GitHub.</p>
+
+    <video width="400" controls>
+      <source src="video/06-git-add-commit-push.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+
+    <p>Je wijzigen zullen wellicht niet meteen voor overgenomen door GitHub Pages. Het beste is om even <em>hard</em> te <em>refreshen</em> met je browser. Vaak worden de wijzigen na enkele momenten dan door gevoerd GitHub Pages. </p>
+
+    <video width="400" controls>
+      <source src="video/06-refresh.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+
+
+    <hr />
+
+    <h2>Enjoy GitHub &amp; publiceren via GitHub Pages!!</h2>
+    <p><img src="https://media.giphy.com/media/6oB3X3W6MYM3C/giphy.gif" alt="" /></p>
+    
+  </main>
+
 </body>
 </html>
